@@ -4,35 +4,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Jekyll v3.8.5">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
     <title>WallCraft</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
-
     <!-- Bootstrap core CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/main.css">
-
     <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
+        html,body{
+            font-family: 'Quicksand', sans-serif;
         }
-      }
     </style>
-    <!-- Custom styles for this template -->
-    <link href="album.css" rel="stylesheet">
   </head>
   <body>
     <header>
@@ -46,14 +29,15 @@
         <div class="col-sm-4 offset-md-1 py-4">
           <h4 class="text-white">Contact</h4>
           <ul class="list-unstyled">
-            <li><a href="#" class="text-white">Follow on Twitter</a></li>
-            <li><a href="#" class="text-white">Like on Facebook</a></li>
+            <li><a href="#" class="text-white">Twitter</a></li>
+            <li><a href="#" class="text-white">Facebook</a></li>
             <li><a href="#" class="text-white">Email me</a></li>
           </ul>
         </div>
       </div>
     </div>
   </div>
+
   <div class="navbar navbar-dark bg-dark shadow-sm">
     <div class="container d-flex justify-content-between">
       <a href="#" class="navbar-brand d-flex align-items-center">
@@ -65,14 +49,16 @@
       </button>
     </div>
   </div>
+
 </header>
 
 <main role="main">
 
   <div class="album py-5 bg-light">
     <div class="container">
-
+        <h4>Latest Wallpapers</h4>   
       <div class="row">
+     
 
         @yield('content')
 
