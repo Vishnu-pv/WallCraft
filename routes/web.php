@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\ImagesController;
+use App\Models\Images;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/',[ImagesController::class, 'fetchimage']);
+   
+
+
+Route::get('addimage',[ImagesController::class, 'index']);
+Route::post('addimage',[ImagesController::class, 'store']);

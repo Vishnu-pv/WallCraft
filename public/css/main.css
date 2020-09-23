@@ -1,6 +1,5 @@
 .img-card{
  
-    background-color: grey;
     border-radius: 3px;
 }
 .img-card a:hover{
@@ -10,6 +9,6 @@
 
 }
 
-.img-thumbnail{
+/* .img-thumbnail{
     height: 300px;
-}
+} */
