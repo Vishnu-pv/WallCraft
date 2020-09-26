@@ -6,7 +6,7 @@
   @foreach ($data as $image) 
 
 
-    <div class="col col-md-3 img-card">
+    <div class="col col-md-3">
     <a href="/{{$image->id}}">
         <img class="img-thumbnail " src="/storage/{{ $image->image }}"  alt="Image"/>
             </a>
