@@ -2,7 +2,7 @@
 
 @section('content')
 
-
+<a href="/" class="btn btn-secondary my-3">Go Back</a> 
 <form enctype="multipart/form-data" method="post">
     @csrf
     <h4 class="py-3">Add New Images</h4>

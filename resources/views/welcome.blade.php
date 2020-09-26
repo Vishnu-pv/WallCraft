@@ -4,12 +4,13 @@
 <div class="row">
 
   @foreach ($data as $image) 
-  <div class="col-md-4">
-    <div class="card mb-4 img-card">
-        <a href="#">
-        <img class="img-thumbnail" src="/storage/{{ $image->image }}"  alt="Image" />
+
+
+    <div class="col col-md-3 img-card">
+    <a href="/{{$image->id}}">
+        <img class="img-thumbnail " src="/storage/{{ $image->image }}"  alt="Image"/>
             </a>
-    </div>
+
   </div>
   @endforeach
 

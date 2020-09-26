@@ -42,12 +42,12 @@ class ImagesController extends Controller
         $data = request()->validate([
             'imagename' => 'required',
             'tags' => 'required',
-            'image' => ['required', 'image'],
+            'image' => 'required|mimes:jpeg,jpg,png',
     ]);
 
     $imagePath = request('image')->store( 'uploads', 'public' );  
 
-    $image = Image::make(public_path("storage/{$imagePath}"))->fit(1000, 1000);
+    $image = Image::make(public_path("storage/{$imagePath}"))->resize(1920,1080);
 
     $image->save();
 
@@ -64,10 +64,9 @@ class ImagesController extends Controller
      return view('addimage');
 }
 
-function fetchimage()
+public function fetchimage()
 {
-    $data = Images::latest()->paginate(6);
-
+    $data = Images::latest()->paginate(12);
      return view('welcome',["data"=>$data]);
 }
 
@@ -82,7 +81,9 @@ function fetchimage()
      */
     public function show($id)
     {
-        //
+        $image =  Images::find($id);
+        return view('images')->with('image',$image);
+
     }
 
     /**

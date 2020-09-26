@@ -19,4 +19,5 @@ Route::get('/',[ImagesController::class, 'fetchimage']);
 
 
 Route::get('addimage',[ImagesController::class, 'index']);
+Route::get('/{id}',[ImagesController::class, 'show']);
 Route::post('addimage',[ImagesController::class, 'store']);
